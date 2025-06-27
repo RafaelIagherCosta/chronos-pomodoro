@@ -1,3 +1,5 @@
+import { TimerIcon } from 'lucide-react';
+
 import { Heading } from './components/Heading';
 
 import './styles/theme.css';
@@ -7,8 +9,11 @@ export function App() {
   return (
     <>
       {/* React Fragment <> */}
-      <Heading attr={123} attr2='String'>
+      <Heading>
         Ola mundo 1
+        <button>
+          <TimerIcon />
+        </button>
       </Heading>
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
