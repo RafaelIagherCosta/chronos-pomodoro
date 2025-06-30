@@ -12,24 +12,27 @@ import { DefaultInput } from './components/DefaultInput';
 import { Cycles } from './components/Cycles';
 import { DefaultButton } from './components/DefaultButton';
 import { PlayCircleIcon, StopCircleIcon } from 'lucide-react';
+import { useState } from 'react';
 
 export function App() {
-  let numero = 0;
+  //Quero que todos os componentes que usam "numero"
+  // saimbam das mudancas em seu valor.
+
+  //Sempre que eu usar useState, nao vou usar atribuicao diretamente regra!
+  //const [numero, setNumero] = useState((0) => {
+  // console.log('Lazy initialization)
+  //return 0
+  //});
+  const [numero, setNumero] = useState(0);
 
   function handleClick() {
-    const span = document.getElementById('numero');
-    if (!span) return;
-
-    numero += 1;
-    span.innerText = numero.toString();
-    console.log(numero, Date.now());
+    setNumero(prevState => prevState + 1);
+    setNumero(1);
   }
 
   return (
     <>
-      <Heading>
-        Add commentMore actions Número: <span id='numero'>{numero}</span>
-      </Heading>
+      <Heading>Add commentMore actions Número: {numero}</Heading>
       <button onClick={handleClick}>Aumenta</button>
       <Container>
         <Logo />
