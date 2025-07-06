@@ -62,6 +62,7 @@ export function MainForm() {
           type='text'
           placeholder='Ex: estudar para a prova'
           ref={taskNameInput}
+          disabled={!!state.activeTask}
         />
       </div>
 
