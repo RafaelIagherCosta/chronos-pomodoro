@@ -6,12 +6,12 @@
   gap: 1.6rem;
 }
 
-.cyclesDots {
+.cycleDots {
   display: flex;
   gap: 0.8rem;
 }
 
-.cyclesDot {
+.cycleDot {
   width: 2rem;
   height: 2rem;
   background-color: var(--primary);
