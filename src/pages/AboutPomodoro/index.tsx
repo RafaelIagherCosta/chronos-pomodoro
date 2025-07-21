@@ -1,14 +1,21 @@
+import { useEffect } from 'react';
+import { Container } from '../../components/Container';
+import { GenericHtml } from '../../components/GenericHtml';
+import { Heading } from '../../components/Heading';
+import { RouterLink } from '../../components/RouterLink';
 import { MainTemplate } from '../../templates/MainTemplate';
-import { Container } from '../Container';
-import { Heading } from '../Heading';
-import { GenericHtml } from '../GenericHtml';
 
 export function AboutPomodoro() {
+  useEffect(() => {
+    document.title = 'Entenda a Técnica Pomodoro - Chronos Pomodoro';
+  }, []);
+
   return (
     <MainTemplate>
       <Container>
         <GenericHtml>
           <Heading>A Técnica Pomodoro 🍅</Heading>
+
           <p>
             A Técnica Pomodoro é uma metodologia de produtividade criada por{' '}
             <strong>Francesco Cirillo</strong>, que consiste em dividir o
@@ -16,7 +23,9 @@ export function AboutPomodoro() {
             com pausas. O objetivo é manter o foco total por um período curto e
             garantir descansos para evitar o cansaço mental.
           </p>
+
           <img src='https://placehold.co/1920x1080' alt='' />
+
           <h2>Como funciona o Pomodoro tradicional?</h2>
           <ul>
             <li>
@@ -33,20 +42,24 @@ export function AboutPomodoro() {
               (geralmente 15 a 30 minutos).
             </li>
           </ul>
+
           <h2>
             Mas no <strong>Chronos Pomodoro</strong> tem um diferencial 🚀
           </h2>
+
           <p>
             Nosso app segue o conceito original, mas com algumas melhorias e
             personalizações pra deixar o processo ainda mais eficiente:
           </p>
+
           <h3>⚙️ Personalização do tempo</h3>
           <p>
             Você pode configurar o tempo de foco, descanso curto e descanso
             longo do jeito que quiser! Basta acessar a{' '}
-            <a href='/settings'>página de configurações</a> e ajustar os minutos
-            como preferir.
+            <RouterLink href='/settings/'>página de configurações</RouterLink> e
+            ajustar os minutos como preferir.
           </p>
+
           <h3>🔁 Ciclos organizados em sequência</h3>
           <p>
             A cada ciclo completado, uma nova task é adicionada automaticamente
@@ -68,6 +81,7 @@ export function AboutPomodoro() {
               ciclo completo.
             </li>
           </ul>
+
           <h3>🍅 Visualização dos ciclos</h3>
           <p>
             Logo abaixo do cronômetro, você verá bolinhas coloridas
@@ -78,18 +92,21 @@ export function AboutPomodoro() {
             <li>🟢 Verde: Descanso curto.</li>
             <li>🔵 Azul: Descanso longo (aparece a cada 8 ciclos).</li>
           </ul>
+
           <p>
             Assim, você sempre sabe em que parte do processo está e o que vem a
             seguir. Não precisa mais anotar no papel ou ficar calculando de
             cabeça!
           </p>
+
           <h3>📊 Histórico automático</h3>
           <p>
             Todas as suas tarefas e ciclos concluídos ficam salvos no{' '}
-            <a href='/history'>histórico</a>, com status de completas ou
-            interrompidas. Assim, você consegue acompanhar sua evolução ao longo
-            do tempo.
+            <RouterLink href='/history/'>histórico</RouterLink>, com status de
+            completas ou interrompidas. Assim, você consegue acompanhar sua
+            evolução ao longo do tempo.
           </p>
+
           <h2>Por que usar o Chronos Pomodoro?</h2>
           <ul>
             <li>✅ Organize seu foco com clareza.</li>
@@ -97,11 +114,13 @@ export function AboutPomodoro() {
             <li>✅ Personalize seus próprios ciclos e tempos.</li>
             <li>✅ Acompanhe seu histórico automaticamente.</li>
           </ul>
+
           <p>
             <strong>Pronto pra focar?</strong> Bora lá{' '}
-            <a href='/'>voltar para a página inicial</a> e iniciar seus
-            Pomodoros! 🍅🚀
+            <RouterLink href='/'>voltar para a página inicial</RouterLink> e
+            iniciar seus Pomodoros! 🍅🚀
           </p>
+
           <p>
             <em>"Foco total, sem pressa, sem pausa, só vai!"</em> 💪🧘‍♂️
           </p>
